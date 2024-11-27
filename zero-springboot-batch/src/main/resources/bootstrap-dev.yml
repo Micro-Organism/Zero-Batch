@@ -1,0 +1,14 @@
+spring:
+    application:
+        name: zero-springboot-batch
+    datasource:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://localhost:3306/springbatch
+        username: root
+        password: root@123
+    batch:
+        jdbc:
+            schema: classpath:org/springframework/batch/core/schema-mysql.sql
+            initialize-schema: always
+        job:
+            enabled: true
